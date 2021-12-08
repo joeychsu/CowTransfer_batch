@@ -9,5 +9,5 @@ for file_name in $file_list ; do
 	update_info=`./cowtransfer-uploader -p ${nj} youtube_split/${file_name}`
 	url=`echo $update_info | grep "Destination" | awk '{print $2}'`
 	echo "${file_name} ${local_md5} ${url}" >> file_url.txt
-exit 0;
+
 done
